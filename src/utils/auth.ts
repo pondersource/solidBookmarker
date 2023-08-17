@@ -19,7 +19,7 @@ export class Auth {
     await login({
       oidcIssuer: oidcIssuer,
       redirectUrl: new URL("/callback", window.location.href).toString(),
-      clientName: "Peditor",
+      clientName: "bookmarker",
     });
   }
 }

@@ -31,7 +31,7 @@ const AppLogo: FC<IProps> = ({}) => {
           textDecoration: "none",
         }}
       >
-        Peditor
+        Bookmarker
       </Typography>
     </AppLink>
   );
