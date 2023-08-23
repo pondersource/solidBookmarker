@@ -190,8 +190,9 @@ const AppProfileMenu: FC<{}> = ({}) => {
             >
               <AppLink href={"/profile"}>
                 <MenuItem sx={{ display: "flex", gap: 1 }}>
-                  {/* <PersonIcon /> */}
-                  <AppLink href={"/bookmarks"}>Bookmarks</AppLink>
+                  <PersonIcon />
+                  <Typography textAlign="center">Bookmarks</Typography>
+
                 </MenuItem>
               </AppLink>
               <MenuItem
