@@ -188,7 +188,7 @@ const AppProfileMenu: FC<{}> = ({}) => {
               open={Boolean(anchorEl)}
               onClose={() => setAnchorEl(null)}
             >
-              <AppLink href={"/profile"}>
+              <AppLink href={"/bookmarks"}>
                 <MenuItem sx={{ display: "flex", gap: 1 }}>
                   <PersonIcon />
                   <Typography textAlign="center">Bookmarks</Typography>
