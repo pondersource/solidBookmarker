@@ -12,22 +12,23 @@ import { onSessionRestore } from "@inrupt/solid-client-authn-browser";
 function App() {
   const navigate = useNavigate()
   useEffect(() => {
-    onSessionRestore((url) => {
-      console.log("🚀 ~ file: App.tsx:17 ~ onSessionRestore ~ url:", url)
-      navigate(url, { replace: true });
-    });
+    // onSessionRestore((url) => {
+    //   navigate(url, { replace: true });
+    // });
     Auth.completeLogin();
   }, []);
 
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route path="/callback" element={<LoginCallBack />} />
+        <Route path="/" element={<BookmarksPage />} />
+
+        {/* <Route path="/callback" element={<LoginCallBack />} />
         <Route path="/" element={<HomePage />} />
         <Route element={<PrivateRoute />}>
           <Route path="/bookmarks" element={<BookmarksPage />} />
         </Route>
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound />} /> */}
       </Route>
     </Routes>
   );

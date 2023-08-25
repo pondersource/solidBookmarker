@@ -18,7 +18,8 @@ export class Auth {
   static async login(oidcIssuer: string) {
     await login({
       oidcIssuer: oidcIssuer,
-      redirectUrl: new URL("/callback", window.location.href).toString(),
+      // redirectUrl: new URL(window.location.href).toString(),
+      redirectUrl: window.location.href,
       clientName: "bookmarker",
       // handleRedirect(redirectUrl) {
       //   window.location.href = redirectUrl;
