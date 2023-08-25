@@ -20,6 +20,9 @@ export class Auth {
       oidcIssuer: oidcIssuer,
       redirectUrl: new URL("/callback", window.location.href).toString(),
       clientName: "bookmarker",
+      // handleRedirect(redirectUrl) {
+      //   window.location.href = redirectUrl;
+      // },
     });
   }
 }
