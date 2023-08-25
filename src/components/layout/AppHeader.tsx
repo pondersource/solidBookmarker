@@ -6,7 +6,6 @@ import {
   useSession,
 } from "@inrupt/solid-ui-react";
 import LogoutIcon from "@mui/icons-material/Logout";
-import PersonIcon from "@mui/icons-material/Person";
 import { FormControl, InputLabel, Select } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
@@ -25,7 +24,6 @@ import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import React, { FC, useState } from "react";
 import { OIDC_PROVIDERS } from "../../constants/oidcProviders";
-import AppLink from "../AppLink/AppLink";
 import AppLogo from "./AppLogo";
 
 type IProps = {};
