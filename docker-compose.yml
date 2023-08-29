@@ -2,11 +2,12 @@ version: '3.4'
 
 services:
   solidbookmarker:
-    image: solidbookmarker
+    container_name: solidbookmarker
+    # image: solidbookmarker
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
     ports:
-      - 1337:80
+      - 4300:80
