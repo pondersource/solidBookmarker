@@ -18,7 +18,7 @@ function App() {
       navigate(url, { replace: true });
     });
     Auth.completeLogin();
-  }, []);
+  }, [navigate]);
 
   return (
     <Routes>
