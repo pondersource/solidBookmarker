@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(solidbookmarker1-soltanireza65.b4a.run www.solidbookmarker1-soltanireza65.b4a.run)
+domains=(solidbookmarker.run www.solidbookmarker.run)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="" # Adding a valid address is strongly recommended

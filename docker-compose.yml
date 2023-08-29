@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  solidbookmarker:
-    container_name: solidbookmarker
+  nginx:
+    container_name: nginx
     # image: solidbookmarker
     build:
       context: .
