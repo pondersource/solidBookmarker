@@ -11,6 +11,7 @@ import { onSessionRestore } from "@inrupt/solid-client-authn-browser";
 
 function App() {
   const navigate = useNavigate()
+  
   useEffect(() => {
     onSessionRestore((url) => {
       console.log("onSessionRestore");
