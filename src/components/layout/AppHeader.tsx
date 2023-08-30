@@ -5,6 +5,8 @@ import {
   Image,
   useSession,
 } from "@inrupt/solid-ui-react";
+import PersonIcon from "@mui/icons-material/Person";
+
 import LogoutIcon from "@mui/icons-material/Logout";
 import { FormControl, InputLabel, Select } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
@@ -24,6 +26,7 @@ import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import React, { FC, useState } from "react";
 import { OIDC_PROVIDERS } from "../../constants/oidcProviders";
+import AppLink from "../AppLink/AppLink";
 import AppLogo from "./AppLogo";
 
 type IProps = {};
@@ -178,13 +181,13 @@ const AppProfileMenu: FC<{}> = ({}) => {
               open={Boolean(anchorEl)}
               onClose={() => setAnchorEl(null)}
             >
-              {/* <AppLink href={"/bookmarks"}>
+              <AppLink href={"/bookmarks"}>
                 <MenuItem sx={{ display: "flex", gap: 1 }}>
                   <PersonIcon />
                   <Typography textAlign="center">Bookmarks</Typography>
 
                 </MenuItem>
-              </AppLink> */}
+              </AppLink>
               <MenuItem
                 onClick={() =>
                   logout().then(() => {

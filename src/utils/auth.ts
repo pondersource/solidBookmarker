@@ -4,6 +4,8 @@ import {
 } from "@inrupt/solid-client-authn-browser";
 
 export async function completeLogin() {
+  console.log("completeLogin");
+
   await handleIncomingRedirect({ restorePreviousSession: true });
 }
 
@@ -12,6 +14,8 @@ export class Auth {
   //   constructor() {}
 
   static async completeLogin() {
+    console.log("Auth::completeLogin");
+    
     await handleIncomingRedirect({ restorePreviousSession: true });
   }
 
