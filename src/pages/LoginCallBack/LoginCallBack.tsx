@@ -12,7 +12,8 @@ const LoginCallBack: FC<{}> = ({ }) => {
         <Typography>Redirecting</Typography>
         <LinearProgress color="inherit" />
       </>}
-      {isLoggedIn && <Navigate to={"/"} />}
+      {/* {isLoggedIn && <Navigate to={"/"} />} */}
+      <Navigate to={"/"} />
     </Box>
   );
 };
