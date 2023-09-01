@@ -15,11 +15,10 @@ function App() {
   useEffect(() => {
     onSessionRestore((url) => {
       console.log("onSessionRestore");
-      
       navigate(url, { replace: true });
     });
     Auth.completeLogin();
-  }, [navigate]);
+  }, []);
 
   return (
     <Routes>
