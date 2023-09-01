@@ -11,13 +11,14 @@ import { onSessionRestore } from "@inrupt/solid-client-authn-browser";
 
 function App() {
   const navigate = useNavigate()
-  
+
   useEffect(() => {
-    onSessionRestore((url) => {
-      console.log("onSessionRestore");
-      navigate(url, { replace: true });
-    });
     Auth.completeLogin();
+    onSessionRestore((currentUrl) => {
+      console.log("🚀 ~ file: App.tsx:17 ~ onSessionRestore ~ currentUrl:", currentUrl)
+      console.log("onSessionRestore");
+      navigate(currentUrl, { replace: true });
+    });
   }, []);
 
   return (

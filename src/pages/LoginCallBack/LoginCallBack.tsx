@@ -6,31 +6,20 @@ import { useNavigate } from "react-router-dom";
 const LoginCallBack: FC<{}> = ({ }) => {
   const navigate = useNavigate()
 
-  const { session: { info: { isLoggedIn, webId } } } = useSession();
-
-  // useEffect(() => {
-  //   onSessionRestore((url) => {
-  //     console.log("onSessionRestore");
-      
-  //     navigate(url, { replace: true });
-  //   });
-  //   Auth.completeLogin();
-  // }, [navigate]);
+  const { session: { info: { isLoggedIn } } } = useSession();
 
   useEffect(() => {
-    setTimeout(() => {
+   const t = setTimeout(() => {
       navigate("/", { replace: true });
     }, 2000);
+    
+    return () => clearTimeout(t);
   }, [isLoggedIn])
-  
+
   return (
     <Box>
-      {!isLoggedIn && <>
-        <Typography>Redirecting</Typography>
-        <Typography>webId: {webId}</Typography>
-        <LinearProgress color="inherit" />
-      </>}
-      {/* {isLoggedIn && <Navigate to={"/"} />} */}
+      <Typography>Redirecting...</Typography>
+      <LinearProgress color="inherit" />
     </Box>
   );
 };
