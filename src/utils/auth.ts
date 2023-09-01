@@ -10,7 +10,7 @@ export async function completeLogin() {
 }
 
 export class Auth {
-  //   private static callbackURL: string = "/callback";
+    // private static callbackURL: string = "/callback";
   //   constructor() {}
 
   static async completeLogin() {
@@ -22,9 +22,8 @@ export class Auth {
   static async login(oidcIssuer: string) {
     await login({
       oidcIssuer: oidcIssuer,
-      // redirectUrl: new URL(window.location.href).toString(),
-      redirectUrl: window.location.href,
-      clientName: "bookmarker",
+      redirectUrl: new URL("/callback", window.location.href).toString(),
+      clientName: "bookmarks",
       // handleRedirect(redirectUrl) {
       //   window.location.href = redirectUrl;
       // },

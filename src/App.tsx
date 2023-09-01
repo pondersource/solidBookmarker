@@ -24,8 +24,6 @@ function App() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        {/* <Route path="/" element={<BookmarksPage />} /> */}
-
         <Route path="/callback" element={<LoginCallBack />} />
         <Route path="/" element={<HomePage />} />
         <Route element={<PrivateRoute />}>
