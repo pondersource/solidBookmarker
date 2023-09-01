@@ -1,5 +1,3 @@
-import { Auth } from "@/utils/auth";
-import { onSessionRestore } from "@inrupt/solid-client-authn-browser";
 import { useSession } from "@inrupt/solid-ui-react";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import { FC, useEffect } from "react";
